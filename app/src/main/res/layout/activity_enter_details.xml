@@ -1,0 +1,94 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/white"
+    android:gravity="center"
+    tools:context=".USER.EnterDetails">
+
+
+
+    <!-- Slot Number Text -->
+    <TextView
+        android:id="@+id/sloteNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Slot Number:"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/quicksand_medium"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp" />
+
+    <!-- Today's Price Text -->
+
+    <!-- Form Fields -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+
+        <!-- Driving Licence Input Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/uploadDrivingLicence"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Vehicle Number"
+            app:boxStrokeColor="@color/myPrimary"
+            app:hintTextColor="@color/myPrimary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLength="15"
+                android:fontFamily="@font/quicksand_medium"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Parking Time Picker -->
+        <TextView
+            android:id="@+id/parkingTimeEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Parking Time"
+            android:textSize="16sp"
+            android:padding="12dp"
+
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:fontFamily="@font/quicksand_medium"
+            android:layout_marginTop="10dp" />
+
+        <!-- Hidden Time and Date Display Fields -->
+        <TextView
+            android:id="@+id/selectedTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/ParkingDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <!-- Upload Button -->
+        <Button
+            android:id="@+id/uploadButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Upload"
+            android:backgroundTint="@color/myPrimary"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:fontFamily="@font/quicksand_medium"
+            android:layout_gravity="center" />
+    </LinearLayout>
+</LinearLayout>
